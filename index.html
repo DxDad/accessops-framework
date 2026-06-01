@@ -98,6 +98,27 @@
             font-size: 1.45rem;
         }
 
+        a:focus-visible {
+            outline: 3px solid #ffbf47;
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: 16px;
+            background: #ffffff;
+            color: var(--accent);
+            padding: 8px 12px;
+            border: 2px solid var(--accent);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            left: 16px;
+        }
+
         h3 {
             margin-bottom: 8px;
             color: #243b53;
@@ -158,6 +179,8 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
     <header>
         <div class="container hero">
             <img src="foto-danilo.png" alt="Foto de Danilo Souza sentado à mesa com um notebook" class="profile-photo">
@@ -172,7 +195,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main id="conteudo" class="container">
         <section aria-labelledby="autoria">
             <h2 id="autoria">Autoria e versão</h2>
 
@@ -185,8 +208,6 @@
             <p class="meta">
                 Autor: Danilo Souza<br>
                 Data de publicação inicial: 01 de junho de 2026<br>
-                Versão: 0.1<br>
-                Status: Documento preliminar de autoria e consolidação conceitual
             </p>
         </section>
 
@@ -305,8 +326,8 @@
             <ul class="contact-list">
                 <li><strong>E-mail:</strong> <a href="mailto:souza.danilo@live.com">souza.danilo@live.com</a></li>
                 <li><strong>Telefone:</strong> <a href="tel:+5511988588232">11 98858-8232</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/danilo-s-souza/">linkedin.com/in/danilo-s-souza</a></li>
-                <li><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/0973728129775438">lattes.cnpq.br/0973728129775438</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/danilo-s-souza/" rel="me">linkedin.com/in/danilo-s-souza</a></li>
+                <li><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/0973728129775438" rel="me">lattes.cnpq.br/0973728129775438</a></li>
             </ul>
         </section>
     </main>
