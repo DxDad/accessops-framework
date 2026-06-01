@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--
+        Document published as a public record of conceptual priority.
+        Project: AccessOps Framework: Continuous Digital Accessibility
+        Author: Danilo Souza
+        Initial publication date: June 1, 2026
+        Version: 0.1
+
+        This document presents the preliminary formulation of an authorial methodology.
+        Its publication in a digital repository has documentary, historical, and public purposes.
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccessOps Framework: Continuous Digital Accessibility</title>
+
+    <meta name="description" content="AccessOps Framework: an authorial methodology for Continuous Digital Accessibility to build, validate, and maintain accessible digital products.">
+    <meta name="author" content="Danilo Souza">
+
+    <style>
+        :root {
+            --bg: #f7f7f5;
+            --text: #1f2933;
+            --muted: #52616b;
+            --accent: #164e63;
+            --card: #ffffff;
+            --border: #d9e2ec;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        header {
+            background: var(--accent);
+            color: #ffffff;
+            padding: 32px 20px 48px;
+        }
+
+        .language-switch {
+            text-align: right;
+            margin-bottom: 24px;
+        }
+
+        .language-switch a {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 2.1rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 1.15rem;
+            max-width: 720px;
+        }
+
+        main {
+            padding: 36px 20px 56px;
+        }
+
+        section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.45rem;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #ffbf47;
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: 16px;
+            background: #ffffff;
+            color: var(--accent);
+            padding: 8px 12px;
+            border: 2px solid var(--accent);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            left: 16px;
+        }
+
+        h3 {
+            margin-bottom: 8px;
+            color: #243b53;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 20px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-photo {
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            section {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#content">Skip to main content</a>
+
+    <header>
+        <div class="container language-switch">
+            <a href="index.html" lang="pt-BR" hreflang="pt-BR">Versão em português</a>
+        </div>
+
+        <div class="container hero">
+            <img src="foto-danilo.png" alt="Photo of Danilo Souza" class="profile-photo">
+
+            <div>
+                <h1>AccessOps Framework: Continuous Digital Accessibility</h1>
+                <p class="subtitle">
+                    A methodology for building, validating, and maintaining accessible digital products,
+                    combining automation, human technical evaluation, recurring monitoring, and product governance.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main id="content" class="container">
+        <section aria-labelledby="authorship">
+            <h2 id="authorship">Authorship</h2>
+
+            <p>
+                This document presents the preliminary formulation of the <strong>AccessOps Framework: Continuous Digital Accessibility</strong>,
+                an authorial methodology developed by <strong>Danilo Souza</strong> based on his practical experience with digital accessibility,
+                technical evaluation of websites and applications, automated monitoring, project management, assistive technology, and governance of digital products and services.
+            </p>
+
+            <p class="meta">
+                Author: Danilo Souza<br>
+                Initial publication date: June 1, 2026<br>
+            </p>
+        </section>
+
+        <section aria-labelledby="definition">
+            <h2 id="definition">Definition</h2>
+
+            <p>
+                The <strong>AccessOps Framework</strong> is an authorial methodology for <strong>Continuous Digital Accessibility</strong>,
+                created to guide the building, validation, maintenance, and evolution of accessible digital products through a cycle composed of
+                automated diagnosis, structural classification, human technical evaluation, impact-oriented remediation, recurring monitoring,
+                and manual reassessment when signs of accessibility regression are identified.
+            </p>
+
+            <p>
+                The proposal is based on the principle that digital accessibility is not a permanent state achieved through a single validation.
+                It needs to be maintained over time, since digital products change, content is updated, components are replaced,
+                new features are added, and design or development decisions can create barriers even in previously evaluated environments.
+            </p>
+        </section>
+
+        <section aria-labelledby="problem">
+            <h2 id="problem">Context and problem</h2>
+
+            <p>
+                Digital accessibility is still often treated as a final validation step, performed shortly before the release
+                of a website, web application, or digital service. In many contexts, this validation is reduced to running automated tools,
+                obtaining a score, or superficially meeting technical checklists.
+            </p>
+
+            <p>
+                Although automated tools are relevant and necessary, they are not sufficient to state that a digital product is accessible.
+                These tools can identify some problems, but they do not fully evaluate the real user experience, semantic coherence,
+                the quality of alternative text, keyboard navigation in complex flows, form comprehension, the adequacy of interactive components,
+                cognitive barriers, or the experience of people with disabilities in different contexts of use.
+            </p>
+        </section>
+
+        <section aria-labelledby="principles">
+            <h2 id="principles">Methodology principles</h2>
+
+            <h3>Accessibility as a continuous cycle</h3>
+            <p>
+                Accessibility should be monitored throughout the entire digital product lifecycle, not only at isolated delivery or audit moments.
+            </p>
+
+            <h3>Automation as diagnosis and monitoring</h3>
+            <p>
+                Automated tools are useful for scale, comparison, and tracking, but their results should be interpreted as partial evidence,
+                not as a final judgment on accessibility.
+            </p>
+
+            <h3>Human evaluation as an essential step</h3>
+            <p>
+                Human technical analysis is necessary to interpret context, flow, semantics, user experience, content quality, and the real impact of barriers.
+            </p>
+
+            <h3>Prioritization by impact, recurrence, and criticality</h3>
+            <p>
+                Not all problems have the same weight. The methodology proposes organizing remediation based on user impact,
+                structural recurrence, and the criticality of the service or feature.
+            </p>
+
+            <h3>Monitoring as regression prevention</h3>
+            <p>
+                After technical validation and remediation, automation should act as a regression sensor, identifying signs of accessibility decline
+                and triggering new analyses by the technical team when necessary.
+            </p>
+        </section>
+
+        <section aria-labelledby="cycle">
+            <h2 id="cycle">Summary of the methodological cycle</h2>
+
+            <ul>
+                <li><strong>Diagnose</strong> using automated tools.</li>
+                <li><strong>Classify</strong> pages, components, and journeys.</li>
+                <li><strong>Evaluate</strong> technically through human analysis.</li>
+                <li><strong>Remediate</strong> with prioritization by impact, recurrence, and criticality.</li>
+                <li><strong>Monitor</strong> continuously with automation.</li>
+                <li><strong>Reassess</strong> manually when signs of regression are identified.</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="applications">
+            <h2 id="applications">Possible applications</h2>
+
+            <p>
+                The <strong>AccessOps Framework</strong> can be applied in different contexts, such as the development of new digital products,
+                maintenance of existing websites and applications, internal accessibility audits, QA processes, development pipelines,
+                design systems, institutional portals, public or private digital services, digital transformation initiatives, digital product governance,
+                and continuous improvement programs.
+            </p>
+        </section>
+
+        <section aria-labelledby="intellectual-property">
+            <h2 id="intellectual-property">Authorship and intellectual property statement</h2>
+
+            <p>
+                This document records the preliminary formulation of the <strong>AccessOps Framework: Continuous Digital Accessibility</strong>,
+                an authorial methodology developed by Danilo Souza.
+            </p>
+
+            <p>
+                Any reproduction, adaptation, publication, distribution, or commercial exploitation of this material, in whole or in part, should observe the author’s rights
+                over its wording, structure, organization, nomenclature, derivative materials, and other expressive elements documented here, without prejudice to the legal limitations
+                applicable to the protection of ideas, methods, and procedures in the abstract.
+            </p>
+
+            <p>
+                The publication of this document in a digital repository is intended to document authorship, priority, and the conceptual development of the methodology.
+            </p>
+        </section>
+
+        <section aria-labelledby="contact">
+            <h2 id="contact">Contact</h2>
+
+            <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:souza.danilo@live.com">souza.danilo@live.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+5511988588232">+55 11 98858-8232</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/danilo-s-souza/" rel="me">linkedin.com/in/danilo-s-souza</a></li>
+                <li><strong>Lattes CV:</strong> <a href="http://lattes.cnpq.br/0973728129775438" rel="me">lattes.cnpq.br/0973728129775438</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                AccessOps Framework: Continuous Digital Accessibility. 
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
