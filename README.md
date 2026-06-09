@@ -1,4 +1,3 @@
-```markdown
 # AccessOps Framework: Acessibilidade Digital Contínua
 
 Uma metodologia de gestão de tecnologia da informação para integrar WCAG, automação, IA, avaliação humana e governança à sustentação contínua de produtos digitais acessíveis.
@@ -15,39 +14,39 @@ O AccessOps desloca a acessibilidade da lógica de validação pontual para uma 
 
 O objetivo do AccessOps Framework é organizar uma abordagem operacional para sustentar a acessibilidade digital ao longo do ciclo de vida de produtos digitais, combinando:
 
-- WCAG como base técnica estruturante;
-- diagnóstico automatizado;
-- uso responsável de automação e IA;
-- avaliação técnica humana;
-- priorização de correções por impacto, recorrência e risco de exclusão;
-- monitoramento recorrente;
-- reavaliação diante de mudanças, barreiras identificadas ou sinais de depreciação da acessibilidade;
-- governança distribuída entre áreas técnicas, gerenciais e estratégicas.
+* WCAG como base técnica estruturante;
+* diagnóstico automatizado;
+* uso responsável de automação e IA;
+* avaliação técnica humana;
+* priorização de correções por impacto, recorrência e risco de exclusão;
+* monitoramento recorrente;
+* reavaliação diante de mudanças, barreiras identificadas ou sinais de depreciação da acessibilidade;
+* governança distribuída entre áreas técnicas, gerenciais e estratégicas.
 
 ## Ciclo operacional
 
 A metodologia organiza a operação de acessibilidade digital em seis movimentos recorrentes:
 
-- **Diagnosticar:** leitura inicial do produto digital, com apoio de ferramentas automatizadas, IA e identificação de padrões de risco;
-- **Classificar:** organização de páginas, jornadas, componentes e conteúdos conforme função, criticidade, recorrência e impacto;
-- **Avaliar:** análise humana orientada pela WCAG, por normas técnicas aplicáveis e pela experiência real de uso;
-- **Corrigir:** transformação dos achados em ações concretas de melhoria, com priorização baseada em impacto e risco de exclusão;
-- **Monitorar:** acompanhamento contínuo de indicadores, alterações e sinais de depreciação da acessibilidade;
-- **Reavaliar:** nova análise diante de mudanças estruturais, novas funcionalidades, relatos de barreiras ou variações relevantes.
+* **Diagnosticar:** leitura inicial do produto digital, com apoio de ferramentas automatizadas, IA e identificação de padrões de risco;
+* **Classificar:** organização de páginas, jornadas, componentes e conteúdos conforme função, criticidade, recorrência e impacto;
+* **Avaliar:** análise humana orientada pela WCAG, por normas técnicas aplicáveis e pela experiência real de uso;
+* **Corrigir:** transformação dos achados em ações concretas de melhoria, com priorização baseada em impacto e risco de exclusão;
+* **Monitorar:** acompanhamento contínuo de indicadores, alterações e sinais de depreciação da acessibilidade;
+* **Reavaliar:** nova análise diante de mudanças estruturais, novas funcionalidades, relatos de barreiras ou variações relevantes.
 
 ## Páginas publicadas
 
-- Página em português: https://dxdad.github.io/accessops-framework/index.html
-- Page in English: https://dxdad.github.io/accessops-framework/en.html
-- Página en español: https://dxdad.github.io/accessops-framework/es.html
+* Página em português: https://dxdad.github.io/accessops-framework/index.html
+* Page in English: https://dxdad.github.io/accessops-framework/en.html
+* Página en español: https://dxdad.github.io/accessops-framework/es.html
 
 ## Documentos disponíveis
 
 O repositório também disponibiliza os documentos completos da metodologia em PDF:
 
-- **AccessOps Framework: Acessibilidade Digital Contínua**
-- **AccessOps Framework: Continuous Digital Accessibility**
-- **AccessOps Framework: Accesibilidad Digital Continua**
+* **AccessOps Framework: Acessibilidade Digital Contínua**
+* **AccessOps Framework: Continuous Digital Accessibility**
+* **AccessOps Framework: Accesibilidad Digital Continua**
 
 ## Licença
 
@@ -69,8 +68,7 @@ Licença: https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br
 
 ## Contato
 
-- E-mail: souza.danilo@live.com
-- LinkedIn: https://www.linkedin.com/in/danilo-s-souza/
-- Currículo Lattes: http://lattes.cnpq.br/0973728129775438
-- GitHub Pages: https://dxdad.github.io/accessops-framework/index.html
-```
+* GitHub Pages: https://dxdad.github.io/accessops-framework/index.html
+* E-mail: [souza.danilo@live.com](mailto:souza.danilo@live.com)
+* LinkedIn: https://www.linkedin.com/in/danilo-s-souza/
+* Currículo Lattes: http://lattes.cnpq.br/0973728129775438
