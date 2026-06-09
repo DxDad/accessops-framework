@@ -1,0 +1,890 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!--
+        Biblioteca inicial de documentos e materiais de apoio.
+        Projeto: AccessOps Framework: Acessibilidade Digital Contínua
+        Autor: Danilo Souza
+        Status: em construção
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca AccessOps: documentos e materiais de apoio</title>
+
+    <meta name="description"
+        content="Biblioteca inicial de documentos, checklists, modelos e materiais de apoio do AccessOps Framework: Acessibilidade Digital Contínua.">
+    <meta name="author" content="Danilo Souza">
+
+    <style>
+        :root {
+            --bg: #f7f7f5;
+            --text: #1f2933;
+            --muted: #52616b;
+            --accent: #164e63;
+            --accent-dark: #0f3f50;
+            --card: #ffffff;
+            --border: #d9e2ec;
+            --soft: #eef6f8;
+            --status-bg: #fff7ed;
+            --status-border: #fed7aa;
+            --status-text: #9a3412;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        header {
+            background: var(--accent);
+            color: #ffffff;
+            padding: 36px 20px 48px;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 2.1rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            margin: 0 auto;
+            font-size: 1.15rem;
+            max-width: 720px;
+        }
+
+        .header-links {
+            margin: 20px 0 0;
+            font-size: 0.95rem;
+        }
+
+        .header-links a {
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+        }
+
+        .header-links .separator {
+            color: #ffffff;
+            margin: 0 8px;
+        }
+
+        main {
+            padding: 36px 20px 56px;
+        }
+
+        section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+
+        .intro-card {
+            background: var(--soft);
+            border-color: #c7dee5;
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.45rem;
+        }
+
+        h3 {
+            margin: 0 0 8px;
+            color: var(--accent);
+            font-size: 1.08rem;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #ffbf47;
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: 16px;
+            background: #ffffff;
+            color: var(--accent);
+            padding: 8px 12px;
+            border: 2px solid var(--accent);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            left: 16px;
+        }
+
+        .notice {
+            border-left: 4px solid var(--accent);
+            background: #ffffff;
+            padding: 14px 16px;
+            margin: 18px 0 0;
+        }
+
+        .library-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .library-card {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #ffffff;
+            padding: 18px;
+        }
+
+        .library-card p {
+            margin-bottom: 12px;
+        }
+
+        .status {
+            display: inline-block;
+            border: 1px solid var(--status-border);
+            background: var(--status-bg);
+            color: var(--status-text);
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 0.94rem;
+            margin-bottom: 0;
+        }
+
+        .path {
+            font-family: Consolas, Monaco, "Courier New", monospace;
+            font-size: 0.9rem;
+            background: #f3f4f6;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 2px 5px;
+            word-break: break-word;
+        }
+
+        .category-summary {
+            margin-bottom: 18px;
+        }
+
+        .roadmap-list {
+            padding-left: 22px;
+        }
+
+        .roadmap-list li {
+            margin-bottom: 8px;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 20px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 850px) {
+            .library-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            section {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+    <header>
+        <div class="container hero">
+            <h1>Biblioteca AccessOps</h1>
+
+            <p class="subtitle">
+                Documentos, checklists, modelos e materiais de apoio para transformar a acessibilidade digital contínua
+                em prática operacional.
+            </p>
+
+            <p class="header-links" aria-label="Links de navegação">
+                <a href="index.html" title="Voltar para a página principal do AccessOps Framework">
+                    Página principal
+                </a>
+                <span class="separator" aria-hidden="true">|</span>
+                <a href="en.html" lang="en" hreflang="en" title="Read the AccessOps Framework page in English">
+                    Read in English
+                </a>
+                <span class="separator" aria-hidden="true">|</span>
+                <a href="es.html" lang="es" hreflang="es" title="Leer la página del AccessOps Framework en español">
+                    Leer en español
+                </a>
+            </p>
+        </div>
+    </header>
+
+    <main id="conteudo" class="container">
+        <section class="intro-card" aria-labelledby="sobre-biblioteca">
+            <h2 id="sobre-biblioteca">Sobre esta biblioteca</h2>
+
+            <p>
+                Esta biblioteca reúne materiais de apoio previstos para o desenvolvimento do AccessOps Framework:
+                Acessibilidade Digital Contínua. A proposta é organizar, em um único espaço, guias, checklists, modelos,
+                exemplos e documentos operacionais que ajudem equipes a aplicar a metodologia de forma gradual,
+                adaptável e documentada.
+            </p>
+
+            <p>
+                Neste momento, os materiais estão indicados como <strong>em construção</strong>. Essa marcação é
+                intencional: a biblioteca funciona como uma visão inicial do conjunto de documentos planejados e também
+                como um checklist vivo do que ainda poderá ser desenvolvido, revisado, priorizado, traduzido ou
+                reorganizado ao longo do tempo.
+            </p>
+
+            <div class="notice">
+                <p>
+                    Os materiais desta biblioteca são instrumentos de apoio metodológico. Eles não substituem as WCAG,
+                    normas técnicas aplicáveis, avaliações especializadas, testes com pessoas com deficiência,
+                    responsabilidades legais ou processos formais de conformidade.
+                </p>
+            </div>
+        </section>
+
+        <section aria-labelledby="como-usar">
+            <h2 id="como-usar">Como usar esta biblioteca</h2>
+
+            <p>
+                A biblioteca foi pensada para apoiar diferentes níveis de maturidade. Uma equipe pode começar pelos
+                guias introdutórios, avançar para os checklists operacionais, adaptar os modelos de registro e, aos
+                poucos, estruturar rotinas de monitoramento, priorização, automação e reavaliação.
+            </p>
+
+            <p>
+                A ordem dos materiais não precisa ser seguida de forma rígida. O AccessOps parte da ideia de ciclo
+                contínuo, portanto, cada organização pode iniciar pelo ponto mais urgente: diagnóstico, correção,
+                monitoramento, governança, documentação, maturidade ou automação.
+            </p>
+        </section>
+
+        <section aria-labelledby="guias">
+            <h2 id="guias">Guias de implementação</h2>
+
+            <p class="category-summary">
+                Materiais explicativos para orientar a adoção inicial do AccessOps em equipes, produtos digitais,
+                serviços públicos, ambientes WordPress, portais institucionais e outros contextos de gestão digital.
+            </p>
+
+            <div class="library-grid">
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Guia de Implementação Inicial do AccessOps</h3>
+                    <p>
+                        Roteiro para aplicar a metodologia em ciclos progressivos, com sugestões de ações para 30, 60 e
+                        90 dias.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e PDF<br>
+                        Caminho previsto: <span class="path">docs/pt-br/guias/guia-implementacao-inicial.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Mapa de Papéis e Responsabilidades</h3>
+                    <p>
+                        Documento para distribuir responsabilidades entre gestão, produto, design, desenvolvimento, QA,
+                        conteúdo, comunicação, contratação, segurança da informação e governança.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e PDF<br>
+                        Caminho previsto: <span class="path">docs/pt-br/guias/mapa-papeis-responsabilidades.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Ficha Operacional do Ciclo AccessOps</h3>
+                    <p>
+                        Síntese prática das etapas Diagnosticar, Classificar, Avaliar, Corrigir, Monitorar e Reavaliar,
+                        com entradas, atividades, saídas e evidências esperadas.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e PDF<br>
+                        Caminho previsto: <span class="path">docs/pt-br/guias/ficha-operacional-ciclo-accessops.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Guia de Adoção em Equipes Pequenas</h3>
+                    <p>
+                        Orientações para aplicar o AccessOps em equipes com poucos recursos, baixa maturidade técnica ou
+                        sem área dedicada de acessibilidade.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/guias/guia-equipes-pequenas.md</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="checklists">
+            <h2 id="checklists">Checklists operacionais</h2>
+
+            <p class="category-summary">
+                Listas práticas para apoiar diagnósticos, avaliações, revisões, monitoramento e reavaliação de produtos
+                digitais ao longo do tempo.
+            </p>
+
+            <div class="library-grid">
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Checklist de Diagnóstico Inicial</h3>
+                    <p>
+                        Itens para orientar a primeira leitura de um produto digital, incluindo inventário de páginas,
+                        ferramentas automatizadas, fluxos críticos e padrões de risco.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e PDF<br>
+                        Caminho previsto: <span class="path">docs/pt-br/checklists/checklist-diagnostico-inicial.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Checklist de Classificação de Páginas e Jornadas</h3>
+                    <p>
+                        Itens para classificar páginas, jornadas, componentes, templates e conteúdos conforme função,
+                        criticidade, recorrência e impacto.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/checklists/checklist-classificacao.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Checklist de Avaliação Humana Mínima</h3>
+                    <p>
+                        Lista de verificação para aspectos que exigem análise humana, como sentido semântico, navegação,
+                        foco, texto alternativo, instruções, mensagens de erro e experiência real de uso.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e PDF<br>
+                        Caminho previsto: <span class="path">docs/pt-br/checklists/checklist-avaliacao-humana-minima.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Checklist de Prontidão para Publicação</h3>
+                    <p>
+                        Itens para revisão antes da publicação de novas páginas, funcionalidades, templates, formulários,
+                        componentes ou fluxos digitais.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/checklists/checklist-prontidao-publicacao.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Checklist de Monitoramento e Reavaliação</h3>
+                    <p>
+                        Itens para rodadas recorrentes de monitoramento, identificação de sinais de depreciação da
+                        acessibilidade e acionamento de nova avaliação humana.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e PDF<br>
+                        Caminho previsto: <span class="path">docs/pt-br/checklists/checklist-monitoramento-reavaliacao.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Checklist de Documentação de Evidências</h3>
+                    <p>
+                        Lista para orientar o registro de evidências, capturas, URLs, datas, ferramentas utilizadas,
+                        versões, responsáveis e decisões técnicas.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/checklists/checklist-documentacao-evidencias.md</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="modelos">
+            <h2 id="modelos">Modelos e templates</h2>
+
+            <p class="category-summary">
+                Arquivos reutilizáveis para transformar achados de acessibilidade em registros, decisões, planos de
+                ação, backlog e acompanhamento operacional.
+            </p>
+
+            <div class="library-grid">
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Modelo de Inventário de Páginas e Jornadas</h3>
+                    <p>
+                        Estrutura para registrar páginas, URLs, jornadas, componentes recorrentes, responsáveis,
+                        criticidade e relação com serviços ou objetivos do produto.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown, CSV e planilha<br>
+                        Caminho previsto: <span class="path">docs/pt-br/modelos/modelo-inventario-paginas-jornadas.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Matriz de Criticidade e Priorização</h3>
+                    <p>
+                        Modelo para priorizar correções considerando impacto na pessoa usuária, frequência, criticidade
+                        da jornada, recorrência técnica, risco institucional e esforço de correção.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown, CSV e planilha<br>
+                        Caminho previsto: <span class="path">docs/pt-br/modelos/matriz-criticidade-priorizacao.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Modelo de Registro de Barreiras</h3>
+                    <p>
+                        Estrutura para registrar barreiras identificadas, impacto observado, critério relacionado,
+                        evidência, localização, recomendação e status de tratamento.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e CSV<br>
+                        Caminho previsto: <span class="path">docs/pt-br/modelos/modelo-registro-barreiras.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Modelo de Backlog de Acessibilidade</h3>
+                    <p>
+                        Template para transformar achados em tarefas priorizadas, com responsáveis, prazos, status,
+                        criticidade, origem do achado e evidência de revalidação.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown, CSV e planilha<br>
+                        Caminho previsto: <span class="path">docs/pt-br/modelos/modelo-backlog-acessibilidade.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Modelo de Relatório de Diagnóstico</h3>
+                    <p>
+                        Estrutura para consolidar achados iniciais, ferramentas utilizadas, escopo avaliado, limitações,
+                        principais riscos e recomendações preliminares.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e PDF<br>
+                        Caminho previsto: <span class="path">docs/pt-br/modelos/modelo-relatorio-diagnostico.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Modelo de Plano de Ação</h3>
+                    <p>
+                        Documento para organizar ações corretivas e preventivas, responsáveis, prazos, dependências,
+                        critérios de aceite e forma de acompanhamento.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e planilha<br>
+                        Caminho previsto: <span class="path">docs/pt-br/modelos/modelo-plano-acao.md</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="automacao">
+            <h2 id="automacao">Automação e ferramentas</h2>
+
+            <p class="category-summary">
+                Materiais para orientar o uso responsável de automação, IA, ferramentas de avaliação automatizada,
+                integrações com esteiras de desenvolvimento e monitoramento recorrente.
+            </p>
+
+            <div class="library-grid">
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Guia de Possibilidades de Automação em AccessOps</h3>
+                    <p>
+                        Documento para separar o que pode ser automatizado, o que pode ser parcialmente automatizado e o
+                        que exige avaliação humana qualificada.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e PDF<br>
+                        Caminho previsto: <span class="path">docs/pt-br/automacao/guia-possibilidades-automacao.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Mapa de Ferramentas Automatizadas</h3>
+                    <p>
+                        Catálogo orientativo de ferramentas que podem apoiar diagnóstico, testes automatizados,
+                        monitoramento, captura de evidências, relatórios e integração com pipelines.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/automacao/mapa-ferramentas-automatizadas.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Roteiro de Monitoramento Recorrente</h3>
+                    <p>
+                        Orientação para desenhar rotinas semanais, quinzenais ou mensais de monitoramento, comparação de
+                        rodadas e acionamento de reavaliação humana.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/automacao/roteiro-monitoramento-recorrente.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Modelo de Indicadores AccessOps</h3>
+                    <p>
+                        Proposta de indicadores para acompanhar cobertura, recorrência de barreiras, tempo de correção,
+                        criticidade, depreciação e evolução da maturidade.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e planilha<br>
+                        Caminho previsto: <span class="path">docs/pt-br/automacao/modelo-indicadores-accessops.md</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="maturidade">
+            <h2 id="maturidade">Maturidade e governança</h2>
+
+            <p class="category-summary">
+                Materiais para apoiar autoavaliação, planejamento de evolução, organização de responsabilidades e
+                sustentação institucional da acessibilidade digital contínua.
+            </p>
+
+            <div class="library-grid">
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Modelo de Maturidade AccessOps</h3>
+                    <p>
+                        Estrutura de níveis de maturidade para avaliar processos, automação, avaliação humana,
+                        documentação, governança, resposta a barreiras e melhoria contínua.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e PDF<br>
+                        Caminho previsto: <span class="path">docs/pt-br/maturidade/modelo-maturidade-accessops.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Roteiro de Autoavaliação de Maturidade</h3>
+                    <p>
+                        Questionário orientativo para identificar o estágio atual de uma organização e definir próximos
+                        passos de evolução em acessibilidade digital contínua.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown e planilha<br>
+                        Caminho previsto: <span class="path">docs/pt-br/maturidade/roteiro-autoavaliacao-maturidade.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Guia de Governança AccessOps</h3>
+                    <p>
+                        Documento para orientar rotinas decisórias, registros, responsabilidades, validações, critérios
+                        de aceite e acompanhamento estratégico da acessibilidade digital.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/maturidade/guia-governanca-accessops.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Modelo de Registro de Decisão Técnica</h3>
+                    <p>
+                        Template para documentar decisões, exceções, justificativas, riscos aceitos, responsáveis,
+                        prazos de revisão e condições para reavaliação.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/maturidade/modelo-registro-decisao-tecnica.md</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="faq-exemplos">
+            <h2 id="faq-exemplos">FAQ e exemplos de aplicação</h2>
+
+            <p class="category-summary">
+                Materiais para responder dúvidas frequentes, reduzir ambiguidades conceituais e demonstrar como o
+                AccessOps pode ser aplicado em cenários concretos ou fictícios.
+            </p>
+
+            <div class="library-grid">
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>FAQ do AccessOps Framework</h3>
+                    <p>
+                        Respostas para dúvidas como: AccessOps substitui WCAG? É uma ferramenta? Precisa de IA? Como
+                        começar com equipe pequena? Ferramentas automatizadas bastam?
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/faq/faq-accessops.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Exemplo de Aplicação em Portal Institucional</h3>
+                    <p>
+                        Exemplo fictício de aplicação do ciclo AccessOps em um portal institucional com páginas
+                        informativas, notícias, formulários e serviços digitais.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">examples/pt-br/portal-institucional.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Exemplo de Aplicação em Site WordPress</h3>
+                    <p>
+                        Exemplo de uso do AccessOps em ambiente WordPress, considerando temas, plugins, templates,
+                        conteúdo editorial, formulários e monitoramento recorrente.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">examples/pt-br/site-wordpress.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Exemplo de Aplicação em Serviço Digital</h3>
+                    <p>
+                        Exemplo fictício de aplicação em serviço digital com jornada crítica, autenticação, formulário,
+                        confirmação, mensagens de erro e acompanhamento de correções.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">examples/pt-br/servico-digital.md</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="governanca-repositorio">
+            <h2 id="governanca-repositorio">Governança do repositório</h2>
+
+            <p class="category-summary">
+                Arquivos de apoio para organizar a evolução pública do framework, registrar mudanças e orientar futuras
+                contribuições, revisões ou reorganizações.
+            </p>
+
+            <div class="library-grid">
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>README da Biblioteca</h3>
+                    <p>
+                        Índice interno da pasta de documentos, com explicação da estrutura, categorias, formatos e
+                        critérios de organização.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">docs/pt-br/README.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Changelog do Framework</h3>
+                    <p>
+                        Registro de mudanças relevantes, novas publicações, revisões conceituais, ajustes de termos e
+                        evolução dos materiais de apoio.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">CHANGELOG.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Roadmap do AccessOps</h3>
+                    <p>
+                        Visão de próximos passos, materiais planejados, prioridades, possibilidades futuras e evolução da
+                        biblioteca.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">ROADMAP.md</span>
+                    </p>
+                </article>
+
+                <article class="library-card">
+                    <span class="status">Em construção</span>
+                    <h3>Guia de Contribuição</h3>
+                    <p>
+                        Orientações futuras para colaboração, sugestões, abertura de issues, revisão de documentos e
+                        atribuição de autoria.
+                    </p>
+                    <p class="meta">
+                        Formato previsto: Markdown<br>
+                        Caminho previsto: <span class="path">CONTRIBUTING.md</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="prioridade">
+            <h2 id="prioridade">Prioridade sugerida de desenvolvimento</h2>
+
+            <p>
+                Como esta biblioteca está em construção, uma forma prática de evoluir o acervo é começar pelos materiais
+                que mais ajudam uma pessoa externa a aplicar o AccessOps sem depender de explicações adicionais.
+            </p>
+
+            <ul class="roadmap-list">
+                <li>Guia de Implementação Inicial do AccessOps;</li>
+                <li>Mapa de Papéis e Responsabilidades;</li>
+                <li>Ficha Operacional do Ciclo AccessOps;</li>
+                <li>Checklist de Diagnóstico Inicial;</li>
+                <li>Checklist de Avaliação Humana Mínima;</li>
+                <li>Checklist de Monitoramento e Reavaliação;</li>
+                <li>Matriz de Criticidade e Priorização;</li>
+                <li>Modelo de Backlog de Acessibilidade;</li>
+                <li>Guia de Possibilidades de Automação;</li>
+                <li>FAQ do AccessOps Framework.</li>
+            </ul>
+
+            <div class="notice">
+                <p>
+                    Esta lista não é definitiva. Os documentos podem ser reordenados, fundidos, divididos ou
+                    substituídos conforme a metodologia amadureça e novas necessidades sejam identificadas.
+                </p>
+            </div>
+        </section>
+
+        <section aria-labelledby="contato">
+            <h2 id="contato">Contato</h2>
+
+            <ul class="contact-list">
+                <li>
+                    <strong>E-mail:</strong>
+                    <a href="mailto:souza.danilo@live.com" title="Enviar e-mail para Danilo Souza">
+                        souza.danilo@live.com
+                    </a>
+                </li>
+                <li>
+                    <strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/danilo-s-souza/" rel="me"
+                        title="Abrir o perfil de Danilo Souza no LinkedIn">
+                        linkedin.com/in/danilo-s-souza
+                    </a>
+                </li>
+                <li>
+                    <strong>Currículo Lattes:</strong>
+                    <a href="http://lattes.cnpq.br/0973728129775438" rel="me"
+                        title="Abrir o Currículo Lattes de Danilo Souza">
+                        lattes.cnpq.br/0973728129775438
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                Biblioteca AccessOps. Materiais em construção para apoio à aplicação do AccessOps Framework:
+                Acessibilidade Digital Contínua.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
+```
