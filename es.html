@@ -1,23 +1,21 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
-<head>
 
+<head>
     <!--
-        Documento publicado como registro público de anterioridad conceptual.
+        Documento publicado para registro público de anterioridad conceptual.
         Proyecto: AccessOps Framework: Accesibilidad Digital Continua
         Autor: Danilo Souza
         Fecha de publicación inicial: 1 de junio de 2026
-        Versión: 0.1
-
-        Este documento presenta la formulación preliminar de una metodología autoral.
-        Su publicación en un repositorio digital tiene fines documentales, históricos y públicos.
     -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AccessOps Framework: Accesibilidad Digital Continua</title>
 
-    <meta name="description" content="AccessOps Framework: metodología autoral de Accesibilidad Digital Continua para crear, validar y mantener productos digitales accesibles.">
+    <meta name="description"
+        content="AccessOps es una metodología de gestión de tecnología de la información orientada al sostenimiento continuo de la accesibilidad digital en productos y servicios digitales.">
     <meta name="author" content="Danilo Souza">
 
     <style>
@@ -26,8 +24,10 @@
             --text: #1f2933;
             --muted: #52616b;
             --accent: #164e63;
+            --accent-dark: #0f3f50;
             --card: #ffffff;
             --border: #d9e2ec;
+            --soft: #eef6f8;
         }
 
         * {
@@ -45,7 +45,7 @@
         header {
             background: var(--accent);
             color: #ffffff;
-            padding: 48px 20px;
+            padding: 28px 20px 48px;
         }
 
         .container {
@@ -55,9 +55,16 @@
 
         .hero {
             display: grid;
-            grid-template-columns: 180px 1fr;
+            grid-template-columns: 180px minmax(0, 620px);
             gap: 32px;
             align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .hero>div {
+            text-align: left;
+            min-width: 0;
         }
 
         .profile-photo {
@@ -77,7 +84,7 @@
         .subtitle {
             margin: 0;
             font-size: 1.15rem;
-            max-width: 720px;
+            max-width: 620px;
         }
 
         .language-switch-inline {
@@ -109,10 +116,25 @@
             margin-bottom: 24px;
         }
 
+        .intro-card {
+            background: var(--soft);
+            border-color: #c7dee5;
+        }
+
         h2 {
             color: var(--accent);
             margin-top: 0;
             font-size: 1.45rem;
+        }
+
+        h3 {
+            margin-bottom: 8px;
+            color: #243b53;
+        }
+
+        a {
+            color: var(--accent);
+            font-weight: 600;
         }
 
         a:focus-visible {
@@ -136,17 +158,48 @@
             left: 16px;
         }
 
-        h3 {
-            margin-bottom: 8px;
-            color: #243b53;
-        }
-
         ul {
             padding-left: 22px;
         }
 
         li {
             margin-bottom: 8px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .mini-card {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            background: #ffffff;
+        }
+
+        .mini-card h3 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.05rem;
+        }
+
+        .download-box {
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            padding: 20px;
+            background: var(--soft);
+        }
+
+        .download-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .download-link {
+            display: inline-block;
+            margin-top: 4px;
         }
 
         .meta {
@@ -163,9 +216,138 @@
             margin-bottom: 10px;
         }
 
-        a {
+        .accessops-flow {
+            margin: 28px 0 0;
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: #f8fafc;
+        }
+
+        .flow-title {
+            font-weight: 700;
             color: var(--accent);
-            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .flow-description {
+            margin-top: 0;
+            color: var(--muted);
+        }
+
+        .flow-list {
+            list-style: none;
+            padding: 0;
+            margin: 28px 0 18px;
+            display: grid;
+            grid-template-columns: repeat(6, minmax(120px, 1fr));
+            grid-template-rows: auto auto;
+            gap: 28px 22px;
+            align-items: center;
+            position: relative;
+        }
+
+        .flow-item {
+            position: relative;
+            min-height: 132px;
+        }
+
+        .flow-item article {
+            height: 100%;
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            background: #ffffff;
+            padding: 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flow-item h3 {
+            margin: 0 0 8px;
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .flow-item p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.4;
+        }
+
+        .flow-diagnosticar {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .flow-clasificar {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .flow-evaluar {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .flow-corregir {
+            grid-column: 4;
+            grid-row: 1;
+        }
+
+        .flow-monitorear {
+            grid-column: 5 / 7;
+            grid-row: 1;
+        }
+
+        .flow-reevaluar {
+            grid-column: 5 / 7;
+            grid-row: 2;
+        }
+
+        .flow-diagnosticar::after,
+        .flow-clasificar::after,
+        .flow-evaluar::after,
+        .flow-corregir::after {
+            content: "→";
+            position: absolute;
+            right: -19px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .flow-monitorear::after {
+            content: "↓";
+            position: absolute;
+            left: 50%;
+            bottom: -34px;
+            transform: translateX(-50%);
+            color: var(--accent);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .flow-reevaluar::before {
+            content: "↩";
+            position: absolute;
+            left: -72px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .flow-note {
+            margin: 18px 0 0;
+            padding: 14px 16px;
+            border-left: 4px solid var(--accent);
+            background: #ffffff;
+            color: var(--text);
         }
 
         footer {
@@ -173,11 +355,65 @@
             padding: 24px 20px;
             color: var(--muted);
             font-size: 0.95rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-list {
+                display: block;
+            }
+
+            .flow-item {
+                min-height: auto;
+                margin-bottom: 34px;
+            }
+
+            .flow-item article {
+                min-height: auto;
+            }
+
+            .flow-diagnosticar::after,
+            .flow-clasificar::after,
+            .flow-evaluar::after,
+            .flow-corregir::after,
+            .flow-monitorear::after {
+                content: "↓";
+                right: auto;
+                left: 50%;
+                top: auto;
+                bottom: -31px;
+                transform: translateX(-50%);
+            }
+
+            .flow-reevaluar::before {
+                content: "";
+            }
+
+            .flow-reevaluar::after {
+                content: "Retorna a Corregir";
+                display: block;
+                margin-top: 12px;
+                color: var(--accent);
+                font-weight: 700;
+                text-align: center;
+            }
         }
 
         @media (max-width: 700px) {
             .hero {
                 grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero>div {
                 text-align: center;
             }
 
@@ -195,151 +431,289 @@
         }
     </style>
 </head>
+
 <body>
     <a class="skip-link" href="#contenido">Ir al contenido principal</a>
 
     <header>
         <div class="container hero">
-            <img src="foto-danilo.png" alt="Foto de Danilo Souza" class="profile-photo">
+            <img src="foto-danilo.png" alt="Foto de Danilo Souza sentado a una mesa con una computadora portátil"
+                class="profile-photo">
 
             <div>
                 <h1>AccessOps Framework: Accesibilidad Digital Continua</h1>
+
                 <p class="subtitle">
-                    Una metodología para crear, validar y mantener productos digitales accesibles,
-                    combinando automatización, evaluación técnica humana, monitoreo recurrente y gobernanza de producto.
+                    Una metodología de gestión de tecnología de la información para integrar WCAG, automatización, IA,
+                    evaluación humana y gobernanza al sostenimiento continuo de productos digitales accesibles.
                 </p>
 
-                <p class="language-switch-inline">
-                    <a href="index.html" lang="pt-BR" hreflang="pt-BR">Ler em português</a>
+                <p class="language-switch-inline" aria-label="Opciones de idioma">
+                    <a href="index.html" lang="pt-BR" hreflang="pt-BR"
+                        title="Ler a página do AccessOps Framework em português">Ler em português</a>
                     <span class="separator" aria-hidden="true">|</span>
-                    <a href="en.html" lang="en" hreflang="en">Read in English</a>
+                    <a href="en.html" lang="en" hreflang="en"
+                        title="Read the AccessOps Framework page in English">Read in English</a>
                 </p>
             </div>
         </div>
     </header>
 
     <main id="contenido" class="container">
-        <section aria-labelledby="autoria">
-            <h2 id="autoria">Autoría</h2>
+        <section class="intro-card" aria-labelledby="resumen">
+            <h2 id="resumen">Qué es AccessOps</h2>
 
             <p>
-                Este documento presenta la formulación preliminar del <strong>AccessOps Framework: Accesibilidad Digital Continua</strong>,
-                una metodología autoral desarrollada por <strong>Danilo Souza</strong> a partir de su experiencia práctica con accesibilidad digital,
-                evaluación técnica de sitios web y aplicaciones, monitoreo automatizado, gestión de proyectos, tecnología asistiva y gobernanza de productos y servicios digitales.
-            </p>
-
-            <p class="meta">
-                Autor: Danilo Souza<br>
-                Fecha de publicación inicial: 1 de junio de 2026<br>
-            </p>
-        </section>
-
-        <section aria-labelledby="definicion">
-            <h2 id="definicion">Definición</h2>
-
-            <p>
-                El <strong>AccessOps Framework</strong> es una metodología autoral de <strong>Accesibilidad Digital Continua</strong>,
-                creada para orientar la creación, validación, mantenimiento y evolución de productos digitales accesibles por medio de un ciclo compuesto por
-                diagnóstico automatizado, clasificación estructural, evaluación técnica humana, corrección orientada por impacto, monitoreo recurrente
-                y reevaluación manual ante indicios de regresión de accesibilidad.
+                AccessOps es una metodología de gestión de tecnología de la información orientada al sostenimiento
+                continuo de la accesibilidad digital en productos y servicios digitales. Su premisa es simple: si los
+                productos digitales cambian continuamente, la accesibilidad también necesita ser continuamente
+                planificada, evaluada, corregida, monitoreada y reevaluada.
             </p>
 
             <p>
-                La propuesta parte del principio de que la accesibilidad digital no es un estado permanente alcanzado mediante una única validación.
-                Debe mantenerse a lo largo del tiempo, ya que los productos digitales cambian, los contenidos se actualizan, los componentes se sustituyen,
-                se agregan nuevas funcionalidades y las decisiones de diseño o desarrollo pueden generar barreras incluso en entornos evaluados previamente.
+                La metodología desplaza la accesibilidad de la lógica de validación puntual hacia una lógica de operación
+                permanente, integrada a la rutina de gestión, desarrollo, QA, UX, contenido, gobernanza y mejora
+                continua.
             </p>
         </section>
 
         <section aria-labelledby="problema">
-            <h2 id="problema">Contexto y problema</h2>
+            <h2 id="problema">El problema que enfrenta la metodología</h2>
 
             <p>
-                La accesibilidad digital todavía suele tratarse como una etapa final de validación, realizada poco antes de la publicación
-                de un sitio web, aplicación web o servicio digital. En muchos contextos, esta validación se reduce a ejecutar herramientas automatizadas,
-                obtener un score o cumplir superficialmente con checklists técnicos.
+                La accesibilidad digital todavía se trata con frecuencia como una etapa de verificación, una auditoría
+                puntual, una exigencia de conformidad o una validación realizada solo antes de la publicación de un
+                producto digital.
             </p>
 
             <p>
-                Aunque las herramientas automatizadas son relevantes y necesarias, no son suficientes para afirmar que un producto digital es accesible.
-                Estos recursos logran identificar parte de los problemas, pero no evalúan plenamente la experiencia real de uso, la coherencia semántica,
-                la calidad de los textos alternativos, la navegación por teclado en flujos complejos, la comprensión de formularios, la adecuación de componentes
-                interactivos, las barreras cognitivas o la experiencia de personas con discapacidad en diferentes contextos de uso.
-            </p>
-        </section>
-
-        <section aria-labelledby="principios">
-            <h2 id="principios">Principios de la metodología</h2>
-
-            <h3>Accesibilidad como ciclo continuo</h3>
-            <p>
-                La accesibilidad debe acompañarse durante todo el ciclo de vida del producto digital, y no solo en momentos aislados de entrega o auditoría.
+                Esta forma de actuación puede identificar problemas importantes, pero no responde bien a la dinámica real
+                de los entornos digitales. Sitios web, aplicaciones, portales, plataformas y servicios digitales cambian
+                continuamente. Los contenidos se actualizan, los componentes se sustituyen, se agregan nuevas
+                funcionalidades, los flujos se rediseñan y las bibliotecas se actualizan. Cada cambio puede introducir
+                nuevas barreras de accesibilidad, incluso en productos ya evaluados.
             </p>
 
-            <h3>Automatización como diagnóstico y monitoreo</h3>
             <p>
-                Las herramientas automatizadas son útiles para escala, comparación y seguimiento, pero sus resultados deben interpretarse como evidencias parciales,
-                no como una sentencia final sobre accesibilidad.
-            </p>
-
-            <h3>Evaluación humana como etapa indispensable</h3>
-            <p>
-                El análisis técnico humano es necesario para interpretar contexto, flujo, semántica, experiencia de uso, calidad del contenido e impacto real de las barreras.
-            </p>
-
-            <h3>Priorización por impacto, recurrencia y criticidad</h3>
-            <p>
-                No todos los problemas tienen el mismo peso. La metodología propone organizar las correcciones considerando el impacto sobre los usuarios,
-                la recurrencia estructural y la criticidad del servicio o funcionalidad.
-            </p>
-
-            <h3>Monitoreo como prevención de regresiones</h3>
-            <p>
-                Después de la validación técnica y las correcciones, la automatización debe actuar como sensor de regresión, identificando indicios de caída de accesibilidad
-                y activando nuevos análisis por parte del equipo técnico cuando sea necesario.
+                Por eso, la pregunta deja de ser solo: “¿Este producto pasó una evaluación de accesibilidad?”. La
+                pregunta central pasa a ser: “¿Cómo mantiene y monitorea este producto su accesibilidad a lo largo del
+                tiempo?”.
             </p>
         </section>
 
-        <section aria-labelledby="ciclo">
-            <h2 id="ciclo">Síntesis del ciclo metodológico</h2>
+        <section aria-labelledby="ops">
+            <h2 id="ops">Inspiración en las prácticas Ops</h2>
 
-            <ul>
-                <li><strong>Diagnosticar</strong> con herramientas automatizadas.</li>
-                <li><strong>Clasificar</strong> páginas, componentes y recorridos.</li>
-                <li><strong>Evaluar</strong> técnicamente mediante análisis humano.</li>
-                <li><strong>Corregir</strong> con priorización por impacto, recurrencia y criticidad.</li>
-                <li><strong>Monitorear</strong> continuamente con automatización.</li>
-                <li><strong>Reevaluar</strong> manualmente ante indicios de regresión.</li>
-            </ul>
+            <p>
+                AccessOps se inspira en prácticas ya consolidadas en la gestión de tecnología, como DevOps, SecOps,
+                DataOps, DesignOps y otros enfoques que organizaron actividades técnicas, antes tratadas de forma
+                fragmentada o puntual, como prácticas continuas integradas al ciclo de vida de productos digitales.
+            </p>
+
+            <p>
+                La inspiración no significa reproducir directamente esos modelos. El punto central es reconocer un cambio
+                común: en entornos digitales complejos, la calidad no se sostiene mediante acciones aisladas. Depende de
+                procesos continuos, responsabilidades distribuidas, evidencias técnicas, monitoreo, gobernanza y
+                capacidad de respuesta.
+            </p>
+        </section>
+
+        <section aria-labelledby="fundamentos">
+            <h2 id="fundamentos">Fundamentos del enfoque</h2>
+
+            <div class="card-grid">
+                <article class="mini-card">
+                    <h3>WCAG como base técnica</h3>
+                    <p>
+                        Las WCAG orientan los criterios técnicos de accesibilidad digital. AccessOps organiza cómo esta
+                        referencia entra en la rutina de gestión, desarrollo, QA, contenido, monitoreo, corrección y
+                        gobernanza.
+                    </p>
+                </article>
+
+                <article class="mini-card">
+                    <h3>Automatización e IA como apoyo</h3>
+                    <p>
+                        Las herramientas automatizadas y la IA ayudan a ampliar escala, trazabilidad y análisis
+                        preliminar, pero no sustituyen la evaluación humana calificada, las pruebas con personas con
+                        discapacidad ni la responsabilidad técnica.
+                    </p>
+                </article>
+
+                <article class="mini-card">
+                    <h3>Responsabilidad distribuida</h3>
+                    <p>
+                        La accesibilidad depende de decisiones distribuidas entre gestión, producto, diseño, desarrollo,
+                        contenido, QA, contratación, comunicación, seguridad de la información y gobernanza de
+                        tecnología.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="depreciacion">
+            <h2 id="depreciacion">Depreciación de la accesibilidad</h2>
+
+            <p>
+                Los productos digitales son entornos en cambio. Cuando la accesibilidad no se monitorea ni se mantiene,
+                el acceso puede deteriorarse silenciosamente. Esta depreciación puede surgir en actualizaciones de
+                código, cambios de contenido, sustitución de componentes, uso de plugins, alteraciones en plantillas o
+                decisiones editoriales y de diseño.
+            </p>
+
+            <p>
+                No monitorear accesibilidad significa aceptar depreciaciones silenciosas en la capacidad de atender,
+                informar, vender, convertir, prestar servicios, construir confianza y cumplir responsabilidades públicas
+                o privadas.
+            </p>
+        </section>
+
+        <section aria-labelledby="ciclo-accessops">
+            <h2 id="ciclo-accessops">El ciclo operacional de AccessOps</h2>
+
+            <p>
+                La operación AccessOps puede organizarse en seis movimientos recurrentes: diagnosticar, clasificar,
+                evaluar, corregir, monitorear y reevaluar. Estos movimientos no forman una secuencia rígida y cerrada,
+                sino un ciclo de sostenimiento de la accesibilidad a lo largo del tiempo.
+            </p>
+
+            <figure class="accessops-flow" aria-labelledby="diagrama-titulo" aria-describedby="diagrama-descripcion">
+                <figcaption id="diagrama-titulo" class="flow-title">
+                    Diagrama de flujo del ciclo operacional de AccessOps
+                </figcaption>
+
+                <p id="diagrama-descripcion" class="flow-description">
+                    El flujo va de Diagnosticar a Clasificar, Evaluar, Corregir, Monitorear y Reevaluar. Después de la
+                    reevaluación, los hallazgos retornan a la etapa Corregir, retroalimentando el backlog de
+                    correcciones.
+                </p>
+
+                <ol class="flow-list">
+                    <li class="flow-item flow-diagnosticar">
+                        <article>
+                            <h3>Diagnosticar</h3>
+                            <p>Lectura inicial, automatización, IA y patrones de riesgo.</p>
+                        </article>
+                    </li>
+
+                    <li class="flow-item flow-clasificar">
+                        <article>
+                            <h3>Clasificar</h3>
+                            <p>Páginas, recorridos, componentes y criticidad.</p>
+                        </article>
+                    </li>
+
+                    <li class="flow-item flow-evaluar">
+                        <article>
+                            <h3>Evaluar</h3>
+                            <p>Análisis humano orientado por WCAG y experiencia real de uso.</p>
+                        </article>
+                    </li>
+
+                    <li class="flow-item flow-corregir">
+                        <article>
+                            <h3>Corregir</h3>
+                            <p>Priorización por impacto, recurrencia y riesgo de exclusión.</p>
+                        </article>
+                    </li>
+
+                    <li class="flow-item flow-monitorear">
+                        <article>
+                            <h3>Monitorear</h3>
+                            <p>Acompañar indicadores, cambios y señales de depreciación.</p>
+                        </article>
+                    </li>
+
+                    <li class="flow-item flow-reevaluar">
+                        <article>
+                            <h3>Reevaluar</h3>
+                            <p>Nuevo análisis ante cambios o barreras identificadas.</p>
+                        </article>
+                    </li>
+                </ol>
+
+                <p class="flow-note">
+                    La reevaluación retroalimenta la corrección, permitiendo ajustar prioridades, corregir nuevas
+                    barreras y reducir la depreciación de la accesibilidad.
+                </p>
+            </figure>
+        </section>
+
+        <section aria-labelledby="madurez">
+            <h2 id="madurez">Madurez en accesibilidad digital</h2>
+
+            <p>
+                La madurez en accesibilidad digital no se mide solo por la ausencia momentánea de errores en una
+                evaluación. Se expresa en la capacidad de la organización para prevenir, identificar, corregir y reducir
+                barreras de forma continua.
+            </p>
+
+            <p>
+                Las organizaciones maduras establecen rutinas de monitoreo, gobernanza, documentación, priorización y
+                reevaluación. En este sentido, la madurez no consiste solo en conocer criterios técnicos, sino en crear
+                condiciones para que la accesibilidad siga siendo observada, mantenida y mejorada durante la evolución
+                del producto digital.
+            </p>
         </section>
 
         <section aria-labelledby="aplicaciones">
-            <h2 id="aplicaciones">Aplicaciones posibles</h2>
+            <h2 id="aplicaciones">Aplicaciones</h2>
 
             <p>
-                El <strong>AccessOps Framework</strong> puede aplicarse en diferentes contextos, como el desarrollo de nuevos productos digitales,
-                el mantenimiento de sitios web y aplicaciones ya publicadas, auditorías internas de accesibilidad, procesos de QA, pipelines de desarrollo,
-                design systems, portales institucionales, servicios digitales públicos o privados, procesos de transformación digital, gobernanza de productos digitales
-                y programas de mejora continua.
+                El enfoque AccessOps se aplica a diferentes contextos de creación, mantenimiento y gobernanza digital,
+                incluyendo desarrollo de nuevos productos digitales, mantenimiento de sitios web y aplicaciones ya
+                publicadas, portales institucionales, servicios digitales públicos y privados, entornos WordPress y otros
+                sistemas de gestión de contenidos, procesos de QA, flujos de desarrollo, design systems, auditorías
+                internas de accesibilidad, programas de transformación digital, capacitación de equipos y mejora
+                continua.
             </p>
         </section>
 
-        <section aria-labelledby="propiedad-intelectual">
-            <h2 id="propiedad-intelectual">Declaración de autoría y propiedad intelectual</h2>
+        <section aria-labelledby="descarga">
+            <h2 id="descarga">Documento completo</h2>
+
+            <div class="download-box">
+                <p>
+                    El documento completo presenta los fundamentos de la metodología AccessOps, incluyendo la inspiración
+                    en las prácticas Ops, el papel de las WCAG, el uso responsable de automatización e IA, el ciclo
+                    operacional, la discusión sobre madurez, los límites del enfoque, autoría, licencia de uso y
+                    contacto.
+                </p>
+
+                <p>
+                    <a class="download-link" href="AccessOps%20Framework%20Accesibilidad%20Digital%20Continua.pdf"
+                        download
+                        title="Descargar el documento AccessOps Framework Accesibilidad Digital Continua en formato PDF, 84 KB">
+                        Descargar el documento completo en español, en formato PDF (84 KB)
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <section aria-labelledby="licencia">
+            <h2 id="licencia">Licencia de uso</h2>
 
             <p>
-                Este documento registra la formulación preliminar del <strong>AccessOps Framework: Accesibilidad Digital Continua</strong>,
-                metodología autoral desarrollada por Danilo Souza.
+                AccessOps: Accesibilidad Digital Continua se pone a disposición bajo la licencia Creative Commons
+                Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0). Su uso, intercambio y adaptación están
+                permitidos para fines no comerciales, siempre que se atribuya la autoría a Danilo Souza y se indique la
+                fuente original.
             </p>
 
             <p>
-                La reproducción, adaptación, publicación, distribución o explotación comercial de este material, total o parcial, debe observar los derechos de autor
-                sobre su redacción, estructura, organización, nomenclatura, materiales derivados y demás elementos expresivos aquí documentados, sin perjuicio de las limitaciones
-                legales aplicables a la protección de ideas, métodos y procedimientos en abstracto.
+                Los usos comerciales, incluyendo consultorías, cursos pagos, certificaciones, productos, servicios o
+                materiales corporativos derivados, dependen de autorización previa del autor.
             </p>
+        </section>
+
+        <section aria-labelledby="autoria">
+            <h2 id="autoria">Autoría</h2>
 
             <p>
-                La publicación de este documento en un repositorio digital tiene por finalidad documentar autoría, anterioridad y desarrollo conceptual de la metodología.
+                El proceso de formulación, sistematización y documentación de esta metodología fue realizado por
+                <strong>Danilo Souza</strong>, a partir de su formación técnica y experiencia práctica con accesibilidad
+                digital, evaluación técnica de sitios web y aplicaciones, monitoreo automatizado, gestión de proyectos,
+                tecnología de apoyo, comunicación inclusiva y gobernanza de productos y servicios digitales.
             </p>
         </section>
 
@@ -347,10 +721,32 @@
             <h2 id="contacto">Contacto</h2>
 
             <ul class="contact-list">
-                <li><strong>Correo electrónico:</strong> <a href="mailto:souza.danilo@live.com">souza.danilo@live.com</a></li>
-                <li><strong>Teléfono:</strong> <a href="tel:+5511988588232">+55 11 98858-8232</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/danilo-s-souza/" rel="me">linkedin.com/in/danilo-s-souza</a></li>
-                <li><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/0973728129775438" rel="me">lattes.cnpq.br/0973728129775438</a></li>
+                <li>
+                    <strong>Correo electrónico:</strong>
+                    <a href="mailto:souza.danilo@live.com" title="Enviar un correo electrónico a Danilo Souza">
+                        souza.danilo@live.com
+                    </a>
+                </li>
+                <li>
+                    <strong>Teléfono:</strong>
+                    <a href="tel:+5511988588232" title="Llamar a Danilo Souza al teléfono +55 11 98858-8232">
+                        +55 11 98858-8232
+                    </a>
+                </li>
+                <li>
+                    <strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/danilo-s-souza/" rel="me"
+                        title="Abrir el perfil de Danilo Souza en LinkedIn">
+                        linkedin.com/in/danilo-s-souza
+                    </a>
+                </li>
+                <li>
+                    <strong>Currículo Lattes:</strong>
+                    <a href="http://lattes.cnpq.br/0973728129775438" rel="me"
+                        title="Abrir el Currículo Lattes de Danilo Souza">
+                        lattes.cnpq.br/0973728129775438
+                    </a>
+                </li>
             </ul>
         </section>
     </main>
@@ -358,10 +754,11 @@
     <footer>
         <div class="container">
             <p>
-                AccessOps Framework: Accesibilidad Digital Continua. 
-                Todos los derechos reservados.
+                AccessOps Framework: Accesibilidad Digital Continua. Licenciado bajo CC BY-NC 4.0.
             </p>
         </div>
     </footer>
 </body>
+
 </html>
+```
