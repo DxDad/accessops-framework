@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--
+        Biblioteca inicial de documentos y materiales de apoyo.
+        Project: AccessOps Framework: Accesibilidad Digital Continua
+        Author: Danilo Souza
+        Status: under construction
+    -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF8KMWJYTB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MF8KMWJYTB');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca AccessOps: documentos y materiales de apoyo</title>
+
+<meta name="description"
+    content="Biblioteca de documentos, checklists, plantillas y materiales de apoyo del AccessOps Framework: Accesibilidad Digital Continua.">
+<meta name="author" content="Danilo Souza">
+
+<style>
+    :root {
+        --bg: #f7f7f5;
+        --text: #1f2933;
+        --muted: #52616b;
+        --accent: #164e63;
+        --accent-dark: #0f3f50;
+        --card: #ffffff;
+        --border: #d9e2ec;
+        --soft: #eef6f8;
+        --status-bg: #fff7ed;
+        --status-border: #fed7aa;
+        --status-text: #9a3412;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+    }
+
+    header {
+        background: var(--accent);
+        color: #ffffff;
+        padding: 36px 20px 48px;
+    }
+
+    .container {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0 0 12px;
+        font-size: 2.1rem;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        margin: 0 auto;
+        font-size: 1.15rem;
+        max-width: 720px;
+    }
+
+    .header-links {
+        margin: 20px 0 0;
+        font-size: 0.95rem;
+    }
+
+    .header-links a {
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+    }
+
+    .header-links .separator {
+        color: #ffffff;
+        margin: 0 8px;
+    }
+
+    main {
+        padding: 36px 20px 56px;
+    }
+
+    section,
+    nav.library-menu {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 28px;
+        margin-bottom: 24px;
+    }
+
+    .intro-card {
+        background: var(--soft);
+        border-color: #c7dee5;
+    }
+
+    h2 {
+        color: var(--accent);
+        margin-top: 0;
+        font-size: 1.45rem;
+    }
+
+    h3 {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 1.08rem;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    a {
+        color: var(--accent);
+        font-weight: 600;
+    }
+
+    a:focus-visible {
+        outline: 3px solid #ffbf47;
+        outline-offset: 3px;
+    }
+
+    .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 16px;
+        background: #ffffff;
+        color: var(--accent);
+        padding: 8px 12px;
+        border: 2px solid var(--accent);
+        border-radius: 6px;
+        z-index: 1000;
+    }
+
+    .skip-link:focus {
+        left: 16px;
+    }
+
+    .menu-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 18px 0 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .menu-list a {
+        display: block;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 10px 12px;
+        text-decoration: none;
+        background: #ffffff;
+    }
+
+    .menu-list a:hover,
+    .menu-list a:focus {
+        text-decoration: underline;
+    }
+
+    .notice {
+        border-left: 4px solid var(--accent);
+        background: #ffffff;
+        padding: 14px 16px;
+        margin: 18px 0 0;
+    }
+
+    .library-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 18px;
+    }
+
+    .library-card {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #ffffff;
+        padding: 18px;
+    }
+
+    .library-card p {
+        margin-bottom: 12px;
+    }
+
+    .status {
+        display: inline-block;
+        border: 1px solid var(--status-border);
+        background: var(--status-bg);
+        color: var(--status-text);
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .meta {
+        color: var(--muted);
+        font-size: 0.94rem;
+        margin-bottom: 0;
+    }
+
+    .category-summary {
+        margin-bottom: 18px;
+    }
+
+    .contact-list {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .contact-list li {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        border-top: 1px solid var(--border);
+        padding: 24px 20px;
+        color: var(--muted);
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    @media (max-width: 850px) {
+
+        .library-grid,
+        .menu-list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 700px) {
+        h1 {
+            font-size: 1.7rem;
+        }
+
+        section,
+        nav.library-menu {
+            padding: 22px;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Ir al contenido principal</a>
+
+<header>
+    <div class="container hero">
+        <h1>Biblioteca AccessOps</h1>
+
+        <p class="subtitle">
+            Documentos, checklists, plantillas y materiales de apoyo para transformar la accesibilidad digital continua en práctica operativa.
+        </p>
+
+        <p class="header-links" aria-label="Navigation links">
+            <a href="es.html" title="Volver a la página principal del AccessOps Framework">
+                Página principal
+            </a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="biblioteca.html" lang="pt-BR" hreflang="pt-BR" title="Acceder a la Biblioteca AccessOps en portugués">
+                Ler em português
+            </a>
+            <span class="separator" aria-hidden="true">|</span>
+            <a href="biblioteca-en.html" lang="en" hreflang="en" title="Read the AccessOps Library in English">
+                Read in English
+            </a>
+        </p>
+    </div>
+</header>
+
+<main id="content" class="container">
+    <nav class="library-menu" aria-labelledby="library-menu">
+        <h2 id="library-menu">Navegación de la biblioteca</h2>
+
+        <p>
+            Utilice los enlaces a continuación para acceder directamente a las secciones de esta página.
+        </p>
+
+        <ul class="menu-list">
+            <li><a href="#sobre-biblioteca">Sobre esta biblioteca</a></li>
+            <li><a href="#como-usar">Cómo usar esta biblioteca</a></li>
+            <li><a href="#guias">Guías de implementación</a></li>
+            <li><a href="#checklists">Checklists operativos</a></li>
+            <li><a href="#modelos">Modelos y plantillas</a></li>
+            <li><a href="#automatizacion">Automatización y herramientas</a></li>
+            <li><a href="#entornos-moviles">Entornos móviles</a></li>
+            <li><a href="#madurez">Madurez y gobernanza</a></li>
+            <li><a href="#ejemplos">Ejemplos de aplicación</a></li>
+        </ul>
+    </nav>
+
+    <section class="intro-card" aria-labelledby="sobre-biblioteca">
+        <h2 id="sobre-biblioteca">Sobre esta biblioteca</h2>
+
+        <p>
+            Esta biblioteca reúne materiales de apoyo previstos para la implementación del AccessOps Framework:
+            Accesibilidad Digital Continua. La propuesta es organizar, en un único espacio, guías, checklists, plantillas,
+            ejemplos y documentos operativos que ayuden a los equipos a aplicar la metodología de forma gradual,
+            adaptable y documentada.
+        </p>
+
+        <p>
+            En este momento, los materiales están indicados como <strong>en construcción</strong>. Esta marca es intencional:
+            la biblioteca debe funcionar como una visión general del conjunto de documentos planificados y también como
+            un checklist vivo de lo que aún podrá desarrollarse, revisarse, priorizarse, traducirse o reorganizarse con el tiempo.
+        </p>
+
+        <div class="notice">
+            <p>
+                Los materiales de esta biblioteca son instrumentos de apoyo metodológico. No sustituyen las WCAG,
+                las normas técnicas aplicables, las evaluaciones especializadas, las pruebas con personas con discapacidad
+                ni las responsabilidades legales.
+            </p>
+        </div>
+    </section>
+
+    <section aria-labelledby="como-usar">
+        <h2 id="como-usar">Cómo usar esta biblioteca</h2>
+        <p>La biblioteca fue pensada para apoyar a organizaciones en diferentes niveles de madurez en la gobernanza de accesibilidad digital. Un equipo puede comenzar por las guías introductorias, avanzar hacia los checklists operativos, adaptar las plantillas de registro y, poco a poco, estructurar rutinas de monitoreo, priorización, automatización y reevaluación.</p>
+        <p>El orden de los materiales no necesita seguirse de forma rígida. AccessOps parte de la idea de ciclo continuo, por lo tanto, cada organización puede iniciar por el punto más urgente para su operación, como diagnóstico, corrección, monitoreo, gobernanza, documentación, madurez o automatización.</p>
+    </section>
+
+    <section aria-labelledby="guias">
+        <h2 id="guias">Guías de implementación</h2>
+        <p class="category-summary">Materiales explicativos para orientar la adopción inicial de AccessOps por equipos, proveedores de productos digitales, gestores de servicios públicos, desarrolladores en entornos WordPress y similares, gestores de portales institucionales y otros contextos de herramientas digitales.</p>
+        <div class="library-grid">
+            <article class="library-card"><span class="status">En construcción</span><h3>Guía de Implementación Inicial de AccessOps</h3><p>Ruta para aplicar la metodología en ciclos progresivos, con sugerencias para sprints de 4, 8, 12 o 16 semanas.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Mapa de Roles y Responsabilidades</h3><p>Documento para orientar la distribución de responsabilidades entre gestión, producto, diseño, desarrollo, QA, contenido, comunicación, contratación, seguridad de la información y gobernanza.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Ficha Operativa del Ciclo AccessOps</h3><p>Síntesis práctica de las etapas Diagnosticar, Clasificar, Evaluar, Corregir, Monitorear y Reevaluar, con entradas previstas, actividades sugeridas, salidas y evidencias esperadas.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Guía de Adopción en Equipos Pequeños</h3><p>Orientaciones para aplicar AccessOps en equipos con pocos recursos, baja madurez técnica o sin un área dedicada de accesibilidad.</p><p class="meta">Formato previsto: Markdown</p></article>
+        </div>
+    </section>
+
+    <section aria-labelledby="checklists">
+        <h2 id="checklists">Checklists operativos</h2>
+        <p class="category-summary">Listas prácticas para apoyar diagnósticos, evaluaciones, revisiones, monitoreo y reevaluación de productos digitales a lo largo del tiempo.</p>
+        <div class="library-grid">
+            <article class="library-card"><span class="status">En construcción</span><h3>Checklist de Diagnóstico Inicial</h3><p>Ítems para orientar la primera lectura del diagnóstico de accesibilidad de un producto digital, incluyendo inventario de páginas, herramientas automatizadas, flujos críticos y patrones de riesgo.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Checklist de Clasificación de Páginas y Jornadas</h3><p>Ítems para clasificar páginas, jornadas, componentes, plantillas y contenidos según función, criticidad, recurrencia e impacto.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Checklist de Evaluación Humana</h3><p>Lista de verificación para aspectos que exigen análisis humano, como sentido semántico, navegación, foco, texto alternativo, instrucciones, mensajes de error y experiencia real de uso.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Checklist de Preparación para Publicación</h3><p>Ítems para revisión antes de publicar nuevas páginas, funcionalidades, plantillas, formularios, componentes o flujos digitales.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Checklist de Monitoreo y Reevaluación</h3><p>Ítems para rondas recurrentes de monitoreo, indicadores y señales de depreciación de accesibilidad, y activación de nueva evaluación humana.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Checklist de Documentación de Evidencias</h3><p>Lista para orientar el registro de evidencias, capturas, URL, fechas, herramientas utilizadas, versiones, responsables y decisiones técnicas.</p><p class="meta">Formato previsto: Markdown</p></article>
+        </div>
+    </section>
+
+    <section aria-labelledby="modelos">
+        <h2 id="modelos">Modelos y plantillas</h2>
+        <p class="category-summary">Archivos reutilizables para transformar hallazgos de accesibilidad en registros, herramientas para toma de decisión, planes de acción, backlog y seguimiento operativo.</p>
+        <div class="library-grid">
+            <article class="library-card"><span class="status">En construcción</span><h3>Modelo de Inventario de Páginas y Jornadas</h3><p>Estructura para registrar páginas, URL, jornadas, componentes recurrentes, responsables, criticidad y relación con servicios u objetivos del producto.</p><p class="meta">Formato previsto: Markdown, CSV y planilla</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Matriz de Criticidad y Priorización</h3><p>Modelo para priorizar correcciones considerando impacto en la persona usuaria, frecuencia de problemas de accesibilidad, criticidad de la jornada, recurrencia técnica de solicitudes, riesgo institucional y esfuerzo de corrección.</p><p class="meta">Formato previsto: Markdown, CSV y planilla</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Modelo de Registro de Barreras</h3><p>Estructura para registrar barreras identificadas, impacto observado, criterio de éxito de WCAG relacionado, evidencia, ubicación, recomendación técnica y estado de tratamiento.</p><p class="meta">Formato previsto: Markdown y CSV</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Modelo de Backlog de Accesibilidad</h3><p>Plantilla para transformar hallazgos en tareas priorizadas, con responsables, plazos, estado, nivel de criticidad, origen del hallazgo y evidencia de revalidación.</p><p class="meta">Formato previsto: Markdown, CSV y planilla</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Modelo de Informe de Diagnóstico</h3><p>Estructura para consolidar hallazgos automatizados, herramientas utilizadas, alcance evaluado, limitaciones técnicas, principales riesgos y recomendaciones preliminares.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Modelo de Declaración de Accesibilidad Digital</h3><p>Plantilla para publicar una declaración de accesibilidad digital, con recursos disponibles, limitaciones identificadas, canales de contacto, responsabilidades y mapa de mejoras previstas.</p><p class="meta">Formato previsto: Markdown, HTML y PDF</p></article>
+        </div>
+    </section>
+
+    <section aria-labelledby="automatizacion">
+        <h2 id="automatizacion">Automatización y herramientas</h2>
+        <p class="category-summary">Materiales para orientar el uso responsable de automatización, IA, herramientas de evaluación automatizada, integraciones con pipelines de desarrollo y monitoreo recurrente.</p>
+        <div class="library-grid">
+            <article class="library-card"><span class="status">En construcción</span><h3>Guía de Posibilidades de Automatización en AccessOps</h3><p>Documento para separar lo que puede automatizarse, lo que puede automatizarse parcialmente y lo que exige evaluación humana cualificada.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Mapa de Herramientas Automatizadas</h3><p>Catálogo orientativo de herramientas que pueden apoyar diagnóstico, pruebas automatizadas, monitoreo, captura de evidencias, informes e integración con pipelines.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Ruta de Automatización e Integración CI/CD</h3><p>Guía para diseñar rutinas de automatización en diferentes niveles de robustez, incluyendo verificaciones recurrentes, ejecución programada, integración con pipelines, recolección de evidencias, comparación entre rondas y activación de reevaluación humana.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Modelo de Indicadores AccessOps</h3><p>Propuesta de indicadores para acompañar cobertura de evaluaciones, recurrencia de barreras, tiempo de corrección, nivel de criticidad, depreciación de accesibilidad y evolución de madurez de las herramientas utilizadas.</p><p class="meta">Formato previsto: Markdown y planilla</p></article>
+        </div>
+    </section>
+
+    <section aria-labelledby="entornos-moviles">
+        <h2 id="entornos-moviles">Entornos móviles</h2>
+        <p class="category-summary">Materiales para adaptar AccessOps a aplicaciones y experiencias móviles, considerando que la metodología también puede aplicarse a estos entornos, pero que la automatización, la recolección de evidencias y la evaluación de la experiencia de uso presentan limitaciones específicas.</p>
+        <div class="library-grid">
+            <article class="library-card"><span class="status">En construcción</span><h3>Guía de Aplicación de AccessOps en Entornos Móviles</h3><p>Orientaciones para aplicar el ciclo AccessOps en aplicaciones móviles, considerando jornadas críticas, componentes nativos, lectores de pantalla, gestos, orientación de pantalla, teclado virtual y variaciones entre sistemas operativos.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Checklist de Evaluación Humana para Aplicaciones</h3><p>Lista de verificación para evaluación manual de accesibilidad en aplicaciones, incluyendo navegación por lector de pantalla, foco, orden de lectura, rótulos, mensajes, contraste, toque, gestos y alternativas de interacción.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Mapa de Límites de la Automatización en Mobile</h3><p>Documento para discutir qué puede automatizarse, qué depende de pruebas asistidas y qué exige evaluación humana en entornos móviles, especialmente en flujos autenticados, componentes nativos e interacciones por gesto.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Modelo de Registro de Barreras en Aplicaciones</h3><p>Plantilla para registrar barreras identificadas en aplicaciones, con sistema operativo, versión, dispositivo, tecnología asistiva utilizada, evidencia, impacto y recomendación técnica.</p><p class="meta">Formato previsto: Markdown y CSV</p></article>
+        </div>
+    </section>
+
+    <section aria-labelledby="madurez">
+        <h2 id="madurez">Madurez y gobernanza</h2>
+        <p class="category-summary">Materiales para apoyar la autoevaluación, planificación de evolución, organización de responsabilidades y sostenimiento institucional de la accesibilidad digital continua.</p>
+        <div class="library-grid">
+            <article class="library-card"><span class="status">En construcción</span><h3>Modelo de Madurez AccessOps</h3><p>Estructura de niveles de madurez para evaluar procesos, niveles de automatización, índice de evaluación humana, documentación, gobernanza, respuesta a barreras y mejora continua de entornos digitales.</p><p class="meta">Formato previsto: Markdown y PDF</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Ruta de Autoevaluación de Madurez</h3><p>Cuestionario orientativo para identificar el estado actual de una organización y definir caminos de evolución en accesibilidad digital continua.</p><p class="meta">Formato previsto: Markdown y planilla</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Guía de Gobernanza AccessOps</h3><p>Documento para orientar rutinas decisorias, registros, responsabilidades, validaciones, criterios de aceptación y seguimiento estratégico de la accesibilidad digital.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Modelo de Registro de Decisión Técnica</h3><p>Plantilla para documentar decisiones, excepciones, justificaciones técnicas u operativas, riesgos aceptados, responsables, plazos de revisión y condiciones para reevaluación.</p><p class="meta">Formato previsto: Markdown</p></article>
+        </div>
+    </section>
+
+    <section aria-labelledby="ejemplos">
+        <h2 id="ejemplos">Ejemplos de aplicación</h2>
+        <p class="category-summary">Materiales para demostrar cómo AccessOps puede aplicarse usando como base escenarios concretos o ficticios, contemplando diferentes tipos de entornos, productos digitales y niveles de madurez.</p>
+        <div class="library-grid">
+            <article class="library-card"><span class="status">En construcción</span><h3>Ejemplo de Aplicación en Portal Institucional</h3><p>Ejemplo ficticio de aplicación del ciclo AccessOps en un portal institucional con páginas informativas, noticias, formularios y servicios digitales.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Ejemplo de Aplicación en Sitio WordPress</h3><p>Ejemplo de uso de AccessOps en un entorno WordPress, considerando temas, plugins, plantillas, contenido editorial, formularios y monitoreo recurrente.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Ejemplo de Aplicación en Servicio Digital</h3><p>Ejemplo ficticio de aplicación en servicio digital con jornada crítica, autenticación, formulario, confirmación, mensajes de error y seguimiento de correcciones.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Ejemplo de Aplicación en Plataforma Moodle</h3><p>Ejemplo de aplicación en entorno educativo, considerando cursos, rutas, materiales de apoyo, foros, actividades, evaluaciones, plugins y experiencia de estudiantes con discapacidad.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Ejemplo de Aplicación en Plataforma de Streaming</h3><p>Ejemplo de aplicación en plataforma con catálogo de videos, reproductor, subtítulos, audiodescripción, navegación por teclado, búsqueda, filtros, autenticación y múltiples dispositivos.</p><p class="meta">Formato previsto: Markdown</p></article>
+            <article class="library-card"><span class="status">En construcción</span><h3>Ejemplo de Aplicación en Aplicación Web</h3><p>Ejemplo de aplicación en sistema web con flujos autenticados, dashboards, tablas, formularios, modales, mensajes de error, componentes dinámicos y rutinas de monitoreo.</p><p class="meta">Formato previsto: Markdown</p></article>
+        </div>
+    </section>
+
+    <section aria-labelledby="autoria-contacto">
+        <h2 id="autoria-contacto">Autoría y contacto</h2>
+        <p>La Biblioteca AccessOps integra el AccessOps Framework: Accesibilidad Digital Continua, metodología desarrollada por Danilo Souza. La información de autoría, licencia y contacto está disponible en la página principal del proyecto.</p>
+        <p><a href="es.html" title="Acceder a la página principal del AccessOps Framework">Acceder a la página principal</a></p>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            AccessOps Framework: Accesibilidad Digital Continua.
+            Licensed under
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Abrir en una nueva pestaña la licencia Creative Commons Atribución-NoComercial 4.0 Internacional">
+                    CC BY-NC 4.0
+            </a>.
+        </p>
+    </div>
+</footer>
+
+</body>
+
+</html>
